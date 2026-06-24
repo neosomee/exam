@@ -4,7 +4,6 @@
 
 ### 1.
 
-sql
 SELECT name
 FROM users
 WHERE age > 18 AND city = 'Москва';
