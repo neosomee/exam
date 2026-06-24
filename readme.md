@@ -61,12 +61,12 @@ public class OrderService {
 public class NoteController {
 
     private final List<NoteResponse> notes = new ArrayList<>();
-    private final AtomicLong idGenerator = new AtomicLong(1);
+    private long nextId = 1;
 
     @PostMapping
     public NoteResponse create(@RequestBody Note note) {
         NoteResponse response = new NoteResponse(
-                idGenerator.getAndIncrement(),
+                nextId++,
                 note.title(),
                 note.text()
         );
@@ -87,4 +87,3 @@ public class NoteController {
     ) {
     }
 }
-
