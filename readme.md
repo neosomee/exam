@@ -4,19 +4,19 @@
 
 ### 1.
 
-```sql
+sql
 SELECT name
 FROM users
 WHERE age > 18 AND city = 'Москва';
-```
+
 
 ### 2.
 
-`@RestController` используется для создания REST API. Это комбинация `@Controller` и `@ResponseBody`, поэтому методы возвращают данные напрямую в HTTP-ответ. `@Controller` обычно возвращает представления (HTML-страницы).
+@RestController используется для создания REST API. Это комбинация @Controller и @ResponseBody, поэтому методы возвращают данные напрямую в HTTP-ответ. @Controller обычно возвращает представления (HTML-страницы).
 
 ### 3.
 
-`JpaRepository` — интерфейс Spring Data JPA для работы с БД. Предоставляет готовые CRUD-операции: `save`, `findById`, `findAll`, `delete`, `count`, а также пагинацию и сортировку.
+JpaRepository — интерфейс Spring Data JPA для работы с БД. Предоставляет готовые CRUD-операции: save, findById, findAll, delete, count, а также пагинацию и сортировку.
 
 ### 4.
 
@@ -34,7 +34,7 @@ ALEX
 
 ## 2.
 
-```java
+java
 public class OrderService {
 
     public BigDecimal getPaidOrdersTotal(List<Order> orders) {
@@ -49,13 +49,13 @@ public class OrderService {
                 .collect(Collectors.groupingBy(Order::getUserName));
     }
 }
-```
+
 
 ---
 
 ## 3. 
 
-```java
+
 @RestController
 @RequestMapping("/notes")
 public class NoteController {
@@ -87,4 +87,4 @@ public class NoteController {
     ) {
     }
 }
-```
+
