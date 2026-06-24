@@ -79,11 +79,4 @@ public class NoteController {
     public List<NoteResponse> getAll() {
         return notes;
     }
-
-    public record NoteResponse(
-            Long id,
-            String title,
-            String text
-    ) {
-    }
 }
